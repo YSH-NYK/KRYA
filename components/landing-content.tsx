@@ -8,7 +8,7 @@ const LandingContent = () => {
       <h2 className="text-center text-2xl sm:text-3xl md:text-4xl text-white font-extrabold mb-6 sm:mb-8 md:mb-10">
         Developers
       </h2>
-      <div className="flex flex-col md:flex-row justify-center gap-6 md:gap-9 m-2">
+      <div className="flex flex-col md:flex-row justify-center gap-6 md:gap-6 m-2">
         <Card className="bg-white/10 border-none text-white mb-6 md:mb-0">
           <CardHeader>
             <CardTitle className="flex items-center gap-x-2">
