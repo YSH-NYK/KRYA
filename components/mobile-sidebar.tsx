@@ -5,8 +5,10 @@ import { Menu } from "lucide-react";
 import { Sheet, SheetTrigger,SheetContent } from "@/components/ui/sheet";
 import Sidebar from "@/components/sidebar";
 import { useEffect, useState } from "react";
+import { getAPiLimitCount } from "@/lib/api-limit"
 
-const Mobilesidebar = () => {
+
+const Mobilesidebar = async() => {
     const [isMounted,setIsMounted] = useState(false);
     useEffect(()=>{
         setIsMounted(true);
@@ -14,6 +16,7 @@ const Mobilesidebar = () => {
     if(!isMounted){
         return null;
     }
+    const apiLimitCount = await getAPiLimitCount();
     return (
         <Sheet>
             <SheetTrigger>
@@ -22,7 +25,8 @@ const Mobilesidebar = () => {
                 </Button>
             </SheetTrigger>
             <SheetContent side="left" className="p-0">
-                <Sidebar/>
+        
+        <Sidebar apiLimitCount = {apiLimitCount}/>
             </SheetContent>
         </Sheet>
     )
