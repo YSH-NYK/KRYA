@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 
 
 
-const Mobilesidebar = async() => {
+const Mobilesidebar = () => {
     const [isMounted,setIsMounted] = useState(false);
     useEffect(()=>{
         setIsMounted(true);
