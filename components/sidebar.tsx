@@ -29,12 +29,12 @@ const routes=[
     href:"/conversation",
     color:"text-white-500",
    },
-   {
-    label: "Image Generation",
-    icon: ImageIcon,
-    href:"/image",
-    color:"text-white-500",
-   },
+//    {
+//     label: "Image Generation",
+//     icon: ImageIcon,
+//     href:"/image",
+//     color:"text-white-500",
+//    },
    {
     label: "Video Generation",
     icon: VideoIcon,
