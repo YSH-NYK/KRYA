@@ -13,7 +13,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "KRYA",
-  description: "AI Platform",
+  description: "NEXTGEn",
 };
 
 export default function RootLayout({

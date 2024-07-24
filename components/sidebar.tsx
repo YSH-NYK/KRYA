@@ -53,11 +53,7 @@ const routes=[
     href:"/code",
     color:"text-white-500",
    },
-   {
-    label: "Settings",
-    icon: Settings,
-    href:"/settings",
-   },
+
 ];
 
 
