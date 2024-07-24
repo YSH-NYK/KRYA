@@ -7,7 +7,6 @@ import Link from "next/link";
 const LandingPage = () => {
   return (
     <div className="h-full">
-      <br />
         <LandingNavbar />
         <br />
         <LandingHero />
