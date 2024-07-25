@@ -8,8 +8,9 @@ const LandingPage = () => {
   return (
     <div className="h-full">
         <LandingNavbar />
+        <br />
         <LandingHero />
-        <br /><br /><br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br /><br /><br /><br /><br />
         <LandingContent/>
     </div>
   );
