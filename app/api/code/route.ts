@@ -2,8 +2,6 @@ import { auth } from '@clerk/nextjs/server';
 import { NextResponse } from 'next/server';
 import axios from 'axios';
 
-import { increaseApiLimit, checkApiLimit } from '@/lib/api-limit';
-
 type RequestBody = {
   messages: { content: string }[];
 };
@@ -22,11 +20,7 @@ export async function POST(req: Request) {
       return new NextResponse("Messages are required and must be an array", { status: 400 });
     }
 
-    const freeTrial = await checkApiLimit();
-
-    if (!freeTrial) {
-      return new NextResponse("Free Trial has expired...", { status: 403 });
-    }
+ 
 
     const apiKey = process.env.GROQCLOUD_API_KEY;
 
@@ -48,7 +42,7 @@ export async function POST(req: Request) {
       }
     });
 
-    await increaseApiLimit();
+    
 
     return NextResponse.json(groqcloudResponse.data);
   } catch (error) {
